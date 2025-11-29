@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Fleet Management</title>
 </head>
 <body>
-    
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label>
+
+      Email:
+      <input type="email" id="email" required />
+    </label><br/><br/>
+    <label>
+
+      Password:
+      <input type="password" id="password" required />
+    </label><br/><br/>
+    <button type="submit">Login</button>
+  </form>
+    <script>
+        
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      if(email === 'admin@gmail.com' && password === 'admin1234') {
+        alert('Login success');
+        window.location.href = 'admin.html';
+      } else {
+        alert('Wrong email or password');
+      }
+    });
+  </script>
 </body>
 </html>
