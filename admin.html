@@ -71,4 +71,34 @@
             <tbody>
             </tbody>
         </table>
-        
+    </main>
+    <script>
+        const fleetForm = document.getElementById('fleetForm');
+        const fleetTableBody = document.getElementById('fleetTable').getElementsByTagName('tbody')[0];
+
+        fleetForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const regNo = document.getElementById('regNo').value;
+            const category = document.getElementById('category').value;
+            const driverName = document.getElementById('driverName').value;
+            const isAvailable = document.getElementById('isAvailable').value;
+
+        if(!regNo || !category || !driverName || !isAvailable) {
+            alert('Please fill in all fields');
+            return;
+        }
+const row =document.createElement('tr');
+row.innerHTML = `
+    <td>${regNo}</td>
+    <td>${category}</td>
+    <td>${driverName}</td>      
+    <td>${isAvailable}</td>
+`;
+fleetTableBody.appendChild(row);
+fleetForm.reset();  
+
+
+        });
+        </script>
+</body>
+</html>
