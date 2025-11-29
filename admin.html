@@ -24,3 +24,36 @@
 <body>
     <nav>
         <h2>Fleet Management Admin</h2>
+    </nav>
+
+    <aside>
+        <h3>Add Fleet</h3>
+        <form id="fleetForm">
+            <label>
+                Reg of Vehicle:
+                <input type="text" id="regNo" required />
+                </label><br/><br/>
+            <label>
+                Category:
+                <select id="category" required>
+                    <option value="Car">Car</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Bike">Bike</option>
+                        <option value="Car">auto</option>
+                    <option value="Truck">Bus</option>
+                    </select>
+                    </label><br/><br/>
+            <label>
+                Driver Name:
+                <input type="text" id="driverName" required />
+            </label><br/><br/>
+            <label>
+                is available:
+                <select id="isAvailable" required>
+                    <option value="available">Yes</option>
+                    <option value="Not available">No</option>
+                </select>
+            </label><br/><br/>
+            <button type="submit">Add Fleet</button>
+            </form>
+    </aside>
